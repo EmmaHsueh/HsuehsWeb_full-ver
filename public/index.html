@@ -1,43 +1,1020 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
 
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>React App</title>
-  </head>
-  <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Hsueh's Web</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: SnapFolio
+  * Template URL: https://bootstrapmade.com/snapfolio-bootstrap-portfolio-template/
+  * Updated: Jul 21 2025 with Bootstrap v5.3.7
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body class="index-page">
+
+  <header id="header" class="header dark-background d-flex flex-column justify-content-center">
+    <i class="header-toggle d-xl-none bi bi-list"></i>
+
+    <div class="header-container d-flex flex-column align-items-start">
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="#hero" class="active"><i class="bi bi-house navicon"></i> Home</a></li>
+          <li><a href="#about"><i class="bi bi-person navicon"></i> About</a></li>
+          <li><a href="#resume"><i class="bi bi-file-earmark-text navicon"></i> Resume</a></li>
+          <li><a href="#portfolio"><i class="bi bi-images navicon"></i> Portfolio</a></li>
+          <li><a href="#services"><i class="bi bi-hdd-stack navicon"></i> Chronicles</a></li>
+
+        </ul>
+      </nav>
+
+    </div>
+
+  </header>
+
+  <main class="main">
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero section">
+
+      <div class="background-elements">
+        <div class="bg-circle circle-1"></div>
+        <div class="bg-circle circle-2"></div>
+      </div>
+
+      <div class="hero-content">
+
+        <div class="container">
+          <div class="row align-items-center">
+
+            <div class="col-lg-6" data-aos="fade-right" data-aos-delay="100">
+              <div class="hero-text">
+                <h1>Hsueh's<span class="accent-text">Web</span></h1>
+                <h2>YuLan(Emma) Hsueh</h2>
+                <p class="lead">I'm a <span class="typed" data-typed-items="ever-learner, page-turner, star-gazer, future-chaser"></span></p>
+                <p class="description">Hi, I'm Emma — a student at NTNU, passionate about learning, exploring, and creating. This website is where I share my journey, ideas, and growth along the way. Welcome!</p>
+
+                <div class="hero-actions">
+                  <a href="#portfolio" class="btn btn-primary">View My Work</a>
+                  <a href="#about" class="btn btn-outline">Get To Know Me</a>
+                </div>
+
+              </div>
+            </div>
+
+            <div class="col-lg-6" data-aos="fade-left" data-aos-delay="200">
+              <div class="hero-visual">
+                <div class="profile-container">
+                  <div class="profile-background"></div>
+                  <img src="assets/img/profile/IMG_2742.JPG" alt="Alexander Chen" class="profile-image">
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </section><!-- /Hero Section -->
+
+    <!-- About Section -->
+    <section id="about" class="about section">
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row">
+          <div class="col-lg-5" data-aos="zoom-in" data-aos-delay="200">
+            <div class="profile-card">
+              <div class="profile-header">
+                <div class="profile-image">
+                  <img src="assets/img/profile/IMG_1535.jpg" alt="Profile Image" class="img-fluid">
+                </div>
+                <div class="profile-badge">
+                  <i class="bi bi-check-circle-fill"></i>
+                </div>
+              </div>
+
+              <div class="profile-content">
+                <h3>Emma Hsueh</h3>
+                <p class="profession">A Forever Learner</p>
+
+                <div class="contact-links">
+                  <a href="41371230h@gapps.ntnu.edu.tw" class="contact-item">
+                    <i class="bi bi-envelope"></i>
+                    41371230h@gapps.ntnu.edu.tw
+                  </a>
+                  <a href="#" class="contact-item">
+                    <i class="bi bi-geo-alt"></i>
+                    Taipei, Taiwan
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-7" data-aos="fade-left" data-aos-delay="300">
+            <div class="about-content">
+              <div class="section-header">
+                <span class="badge-text">Get to Know Me</span>
+                <h2>Explorer of Knowledge and Life</h2>
+              </div>
+
+              <div class="description">
+                <p>My journey is guided by a passion for exploration — from diving into the pages of books to uncover the worlds they hold, to reaching for the stars in large-scale stargazing events.</p>
+
+                <p>I have learned from mentors and peers, finding joy in helping others and embracing challenges, while seeking to balance curiosity, creativity, and compassion, turning every experience into an opportunity to grow and connect with the world.</p>
+              </div>
+
+              <div class="details-grid">
+                <div class="detail-row">
+                  <div class="detail-item">
+                    <span class="detail-label">Education</span>
+                    <span class="detail-value">TAHRD, NTNU</span>
+                  </div>
+                  <div class="detail-item">
+                    <span class="detail-label">Status</span>
+                    <span class="detail-value">Sophomore</span>
+                  </div>
+                </div>
+                <div class="detail-row">
+                  <div class="detail-item">
+                    <span class="detail-label">Vision</span>
+                    <span class="detail-value">Innovation</span>
+                  </div>
+                  <div class="detail-item">
+                    <span class="detail-label">Languages</span>
+                    <span class="detail-value">English, Chinese</span>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </section><!-- /About Section -->
+
+    <!-- Stats Section -->
+    <section id="stats" class="stats section light-background">
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row justify-content-center">
+          <div class="col-lg-10">
+            <div class="stats-wrapper">
+              <div class="stats-item" data-aos="zoom-in" data-aos-delay="150">
+                <div class="icon-wrapper">
+                  <i class="bi bi-emoji-smile"></i>
+                </div>
+                <p>Over</p>
+                <span data-purecounter-start="0" data-purecounter-end="5" data-purecounter-duration="1" class="purecounter"></span>
+                <p>Large-scale Events</p>
+                <p>Organized</p>
+              </div><!-- End Stats Item -->
+
+              <div class="stats-item" data-aos="zoom-in" data-aos-delay="200">
+                <div class="icon-wrapper">
+                  <i class="bi bi-journal-richtext"></i>
+                </div>
+                <p>Over</p>
+                <span data-purecounter-start="0" data-purecounter-end="10" data-purecounter-duration="1" class="purecounter"></span>
+                <p>Certifications</p>
+                <p>Earned</p>
+              </div><!-- End Stats Item -->
+
+              <div class="stats-item" data-aos="zoom-in" data-aos-delay="250">
+                <div class="icon-wrapper">
+                  <i class="bi bi-headset"></i>
+                </div>
+                <p>Over</p>
+                <span data-purecounter-start="0" data-purecounter-end="300" data-purecounter-duration="1" class="purecounter"></span>
+                <p>Hours Of Reading</p>
+              </div><!-- End Stats Item -->
+
+              <div class="stats-item" data-aos="zoom-in" data-aos-delay="300">
+                <div class="icon-wrapper">
+                  <i class="bi bi-people"></i>
+                </div>
+                <p>Proficient In</p>
+                <span data-purecounter-start="0" data-purecounter-end="4" data-purecounter-duration="1" class="purecounter"></span>
+                <p>Languages</p>
+              </div><!-- End Stats Item -->
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </section><!-- /Stats Section -->
+
     <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
+    <section id="skills" class="skills section">
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Skills</h2>
+        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+      </div>
 
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="skills-category" data-aos="fade-up" data-aos-delay="200">
+              <h3>Front-end Development</h3>
+              <div class="skills-animation">
+                <div class="skill-item">
+                  <div class="d-flex justify-content-between align-items-center">
+                    <h4>HTML/CSS</h4>
+                    <span class="skill-percentage">95%</span>
+                  </div>
+                  <div class="progress">
+                    <div class="progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                  <div class="skill-tooltip">Expert level knowledge of semantic HTML5 and modern CSS3 techniques</div>
+                </div>
+
+                <div class="skill-item">
+                  <div class="d-flex justify-content-between align-items-center">
+                    <h4>JavaScript</h4>
+                    <span class="skill-percentage">85%</span>
+                  </div>
+                  <div class="progress">
+                    <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                  <div class="skill-tooltip">Strong proficiency in ES6+, DOM manipulation, and modern frameworks</div>
+                </div>
+
+                <div class="skill-item">
+                  <div class="d-flex justify-content-between align-items-center">
+                    <h4>React</h4>
+                    <span class="skill-percentage">80%</span>
+                  </div>
+                  <div class="progress">
+                    <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                  <div class="skill-tooltip">Experience with React hooks, state management, and component architecture</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="skills-category" data-aos="fade-up" data-aos-delay="300">
+              <h3>Back-end Development</h3>
+              <div class="skills-animation">
+                <div class="skill-item">
+                  <div class="d-flex justify-content-between align-items-center">
+                    <h4>Node.js</h4>
+                    <span class="skill-percentage">75%</span>
+                  </div>
+                  <div class="progress">
+                    <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                  <div class="skill-tooltip">Server-side JavaScript development with Express and REST APIs</div>
+                </div>
+
+                <div class="skill-item">
+                  <div class="d-flex justify-content-between align-items-center">
+                    <h4>Python</h4>
+                    <span class="skill-percentage">70%</span>
+                  </div>
+                  <div class="progress">
+                    <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                  <div class="skill-tooltip">Python development with Django and data analysis tools</div>
+                </div>
+
+                <div class="skill-item">
+                  <div class="d-flex justify-content-between align-items-center">
+                    <h4>SQL</h4>
+                    <span class="skill-percentage">65%</span>
+                  </div>
+                  <div class="progress">
+                    <div class="progress-bar" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                  <div class="skill-tooltip">Database design, optimization, and complex queries</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
     -->
-  </body>
+
+    <!-- Resume Section -->
+    <section id="resume" class="resume section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Resume</h2>
+        <p>The building blocks of my journey and the tools I bring to every challenge.</p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-4">
+          <!-- Left column with summary and contact -->
+          <div class="col-lg-4">
+            <div class="resume-side" data-aos="fade-right" data-aos-delay="100">
+              <div class="profile-img mb-4">
+                <img src="assets/img/profile/IMG_2743.JPG" alt="Profile" class="img-fluid rounded">
+              </div>
+
+              <h3>Professional Summary</h3>
+              <p>Curious and driven undergraduate student at NTNU, passionate about exploring technology, astronomy, and continuous learning. Experienced in leadership roles within student organizations, with skills in software development, problem-solving, and collaborative project execution. Committed to leveraging knowledge and creativity to tackle challenges and contribute meaningfully to both academic and extracurricular pursuits.</p>
+
+
+              <div class="skills-animation mt-4">
+                <h3>Core Competencies</h3>
+                <div class="skill-item">
+                  <div class="d-flex justify-content-between">
+                    <span>Collaboration & Leadership</span>
+                    <span>85%</span>
+                  </div>
+                  <div class="progress">
+                    <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                </div>
+
+                <div class="skill-item">
+                  <div class="d-flex justify-content-between">
+                    <span>Project Management</span>
+                    <span>80%</span>
+                  </div>
+                  <div class="progress">
+                    <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                </div>
+
+                <div class="skill-item">
+                  <div class="d-flex justify-content-between">
+                    <span>Problem Solving & Research</span>
+                    <span>80%</span>
+                  </div>
+                  <div class="progress">
+                    <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                </div>
+
+                <div class="skill-item">
+                  <div class="d-flex justify-content-between">
+                    <span>Adaptability & Learning</span>
+                    <span>85%</span>
+                  </div>
+                  <div class="progress">
+                    <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right column with experience and education -->
+          <div class="col-lg-8 ps-4 ps-lg-5">
+
+            <!-- Education Section -->
+            <div class="resume-section" data-aos="fade-up" data-aos-delay="100">
+              <h3><i class="bi bi-mortarboard me-2"></i>Education</h3>
+
+              <div class="resume-item">
+                <h4>Undergraduate</h4>
+                <h5>2024 - present</h5>
+                <p class="company"><i class="bi bi-building"></i> National Taiwan Normal University</p>
+                <p>Department of Technology Application and Human Resource Development</p>
+              </div>
+
+              <div class="resume-item">
+                <h4>High School</h4>
+                <h5>2021 - 2024</h5>
+                <p class="company"><i class="bi bi-building"></i> HGSH</p>
+                <p>National Hsinchu Girls' Senior High School</p>
+              </div>
+            </div>
+
+            <!-- Engagements Section -->
+            <div class="resume-section" data-aos="fade-up">
+              <h3><i class="bi bi-briefcase me-2"></i>Engagements</h3>
+
+              <div class="resume-item">
+                <h4>Astronomy Chasing-star</h4>
+                <h5>2022 - Present</h5>
+                <p class="company"><i class="bi bi-building"></i> member</p>
+                <ul>
+                  <li>Participate in national-level events and collaborative projects</li>
+                  <li>Contribute to organizing large-scale exhibitions</li>
+                  <li>Gain experience in learning from senior members, public engagement</li>
+                  <li>Promoting scientific literacy in astronomy</li>
+                </ul>
+              </div>
+
+              <div class="resume-item">
+                <h4>Astronomy Club</h4>
+                <h5>2022 - 2023</h5>
+                <p class="company"><i class="bi bi-building"></i> club president</p>
+                <ul>
+                  <li>Led the 33rd cohort of the Astronomy Club</li>
+                  <li>Coordinated activities for 100+ students</li>
+                  <li>Organized observation sessions and workshops</li>
+                </ul>
+              </div>
+            </div>
+
+          
+          </div>
+        </div>
+
+      </div>
+
+    </section><!-- /Resume Section -->
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Portfolio</h2>
+        <p>A collection of moments and memories — from the stars above to the life around me, captured through my lens.</p>
+        <p>This portfolio brings together my fascination with astronomy, my love for spontaneous everyday snapshots, and the joy of documenting travels.</p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
+
+          <div class="row">
+            <div class="col-lg-3 filter-sidebar">
+              <div class="filters-wrapper" data-aos="fade-right" data-aos-delay="150">
+                <ul class="portfolio-filters isotope-filters">
+                  <li data-filter="*" class="filter-active">All Projects</li>
+                  <li data-filter=".filter-Starlit">Starlit</li>
+                  <li data-filter=".filter-Expo">Expo</li>
+                  <li data-filter=".filter-Wilds">Wilds</li>
+                  <li data-filter=".filter-Shore">Shore</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="col-lg-9">
+              <div class="row gy-4 portfolio-container isotope-container" data-aos="fade-up" data-aos-delay="200">
+
+
+                <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-Starlit">
+                  <div class="portfolio-wrap">
+                    <img src="assets/img/portfolio/IMG_59E773547C63-1.jpeg" class="img-fluid" alt="Portfolio Image" loading="lazy">
+                    <div class="portfolio-info">
+                      <div class="content">
+                        <span class="category">Starlit</span>
+                        <h4>Rosette Nebula</h4>
+                        <div class="portfolio-links">
+                          <a href="assets/img/portfolio/IMG_59E773547C63-1.jpeg" class="glightbox" title="Rosette Nebula"><i class="bi bi-plus-lg"></i></a>
+                          
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div><!-- End Portfolio Item -->
+
+
+                <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-Starlit">
+                  <div class="portfolio-wrap">
+                    <img src="assets/img/portfolio/0P1A5002.JPG" class="img-fluid" alt="Portfolio Image" loading="lazy">
+                    <div class="portfolio-info">
+                      <div class="content">
+                        <span class="category">Starlit</span>
+                        <h4>Winter Night</h4>
+                        <div class="portfolio-links">
+                          <a href="assets/img/portfolio/0P1A5002.JPG" class="glightbox" title="Winter Night"><i class="bi bi-plus-lg"></i></a>
+                          
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div><!-- End Portfolio Item -->
+
+                <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-Starlit">
+                  <div class="portfolio-wrap">
+                    <img src="assets/img/portfolio/20221029-DSC02271.jpg" class="img-fluid" alt="Portfolio Image" loading="lazy">
+                    <div class="portfolio-info">
+                      <div class="content">
+                        <span class="category">Starlit</span>
+                        <h4>Summer night</h4>
+                        <div class="portfolio-links">
+                          <a href="assets/img/portfolio/20221029-DSC02271.jpg" class="glightbox" title="Summer night"><i class="bi bi-plus-lg"></i></a>
+                          
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div><!-- End Portfolio Item -->
+
+                <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-Wilds">
+                  <div class="portfolio-wrap">
+                    <img src="assets/img/portfolio/1D9A9520.JPG" class="img-fluid" alt="Portfolio Image" loading="lazy">
+                    <div class="portfolio-info">
+                      <div class="content">
+                        <span class="category">Wilds</span>
+                        <h4>Taking a Picture</h4>
+                        <div class="portfolio-links">
+                          <a href="assets/img/portfolio/1D9A9520.JPG" class="glightbox" title="Taking a Picture"><i class="bi bi-plus-lg"></i></a>
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div><!-- End Portfolio Item -->
+
+                <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-Expo">
+                  <div class="portfolio-wrap">
+                    <img src="assets/img/portfolio/IMG_2741.JPG" class="img-fluid" alt="Portfolio Image" loading="lazy">
+                    <div class="portfolio-info">
+                      <div class="content">
+                        <span class="category">Expo</span>
+                        <h4>Capturing </h4>
+                        <div class="portfolio-links">
+                          <a href="assets/img/portfolio/IMG_2741.JPG" class="glightbox" title="Capturing Moments"><i class="bi bi-plus-lg"></i></a>
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div><!-- End Portfolio Item -->
+
+                <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-Shore">
+                  <div class="portfolio-wrap">
+                    <img src="assets/img/portfolio/IMG_9083.JPG" class="img-fluid" alt="Portfolio Image" loading="lazy">
+                    <div class="portfolio-info">
+                      <div class="content">
+                        <span class="category">Shore</span>
+                        <h4>Beach Cleanup</h4>
+                        <div class="portfolio-links">
+                          <a href="assets/img/portfolio/IMG_9083.JPG" class="glightbox" title="Beach Cleanup"><i class="bi bi-plus-lg"></i></a>
+                          
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div><!-- End Portfolio Item -->
+
+            
+
+                <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-Starlit">
+                  <div class="portfolio-wrap">
+                    <img src="assets/img/portfolio/941788.jpg" class="img-fluid" alt="Portfolio Image" loading="lazy">
+                    <div class="portfolio-info">
+                      <div class="content">
+                        <span class="category">Starlit</span>
+                        <h4>Midnight</h4>
+                        <div class="portfolio-links">
+                          <a href="assets/img/portfolio/941788.jpg" class="glightbox" title="Midnight"><i class="bi bi-plus-lg"></i></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div><!-- End Portfolio Item -->
+
+                <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-Wilds">
+                  <div class="portfolio-wrap">
+                    <img src="assets/img/portfolio/1280px-C2023_A3.png" class="img-fluid" alt="Portfolio Image" loading="lazy">
+                    <div class="portfolio-info">
+                      <div class="content">
+                        <span class="category">Wilds</span>
+                        <h4>Comet</h4>
+                        <div class="portfolio-links">
+                          <a href="assets/img/portfolio/1280px-C2023_A3.png" class="glightbox" title="Comet"><i class="bi bi-plus-lg"></i></a>
+                        
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div><!-- End Portfolio Item -->
+
+                <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-Expo">
+                  <div class="portfolio-wrap">
+                    <img src="assets/img/portfolio/9-0C6A7354.jpg" class="img-fluid" alt="Portfolio Image" loading="lazy">
+                    <div class="portfolio-info">
+                      <div class="content">
+                        <span class="category">Expo</span>
+                        <h4>Legacy</h4>
+                        <div class="portfolio-links">
+                          <a href="assets/img/portfolio/9-0C6A7354.jpg" class="glightbox" title="Legacy"><i class="bi bi-plus-lg"></i></a>
+                          
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                </div><!-- End Portfolio Item -->
+
+                <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-Expo">
+                  <div class="portfolio-wrap">
+                    <img src="assets/img/portfolio/0C6A7437.JPG" class="img-fluid" alt="Portfolio Image" loading="lazy">
+                    <div class="portfolio-info">
+                      <div class="content">
+                        <span class="category">Expo</span>
+                        <h4>Chasing-star</h4>
+                        <div class="portfolio-links">
+                          <a href="assets/img/portfolio/0C6A7437.JPG" class="glightbox" title="Chasing-star"><i class="bi bi-plus-lg"></i></a>
+                          
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                </div><!-- End Portfolio Item -->
+
+                <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-Wilds">
+                  <div class="portfolio-wrap">
+                    <img src="assets/img/portfolio/DSC02862.jpg" class="img-fluid" alt="Portfolio Image" loading="lazy">
+                    <div class="portfolio-info">
+                      <div class="content">
+                        <span class="category">Wilds</span>
+                        <h4>Sunshine Moments</h4>
+                        <div class="portfolio-links">
+                          <a href="assets/img/portfolio/DSC02862.jpg" class="glightbox" title="Sunshine Moments"><i class="bi bi-plus-lg"></i></a>
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div><!-- End Portfolio Item -->
+
+                <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-Expo">
+                  <div class="portfolio-wrap">
+                    <img src="assets/img/portfolio/DSC-65.jpg" class="img-fluid" alt="Portfolio Image" loading="lazy">
+                    <div class="portfolio-info">
+                      <div class="content">
+                        <span class="category">Expo</span>
+                        <h4>Instrument instructor</h4>
+                        <div class="portfolio-links">
+                          <a href="assets/img/portfolio/DSC-65.jpg" class="glightbox" title="Instrument instructor"><i class="bi bi-plus-lg"></i></a>
+                          
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div><!-- End Portfolio Item -->
+
+                <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-Expo">
+                  <div class="portfolio-wrap">
+                    <img src="assets/img/portfolio/IMG_20250124_111653.jpg" class="img-fluid" alt="Portfolio Image" loading="lazy">
+                    <div class="portfolio-info">
+                      <div class="content">
+                        <span class="category">Expo</span>
+                        <h4>snapshots</h4>
+                        <div class="portfolio-links">
+                          <a href="assets/img/portfolio/IMG_20250124_111653.jpg" class="glightbox" title="snapshots"><i class="bi bi-plus-lg"></i></a>
+               
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div><!-- End Portfolio Item -->
+
+                <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-Shore">
+                  <div class="portfolio-wrap">
+                    <img src="assets/img/portfolio/IMG_9030.HEIC" class="img-fluid" alt="Portfolio Image" loading="lazy">
+                    <div class="portfolio-info">
+                      <div class="content">
+                        <span class="category">Shore</span>
+                        <h4>Cleanup Group</h4>
+                        <div class="portfolio-links">
+                          <a href="assets/img/portfolio/IMG_9030.HEIC" class="glightbox" title="Cleanup Group"><i class="bi bi-plus-lg"></i></a>
+                          
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div><!-- End Portfolio Item -->
+
+                <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-Shore">
+                  <div class="portfolio-wrap">
+                    <img src="assets/img/portfolio/IMG_8936.HEIC" class="img-fluid" alt="Portfolio Image" loading="lazy">
+                    <div class="portfolio-info">
+                      <div class="content">
+                        <span class="category">Shore</span>
+                        <h4>Hermit crab</h4>
+                        <div class="portfolio-links">
+                          <a href="assets/img/portfolio/IMG_8936.HEIC" class="glightbox" title="Hermit crab"><i class="bi bi-plus-lg"></i></a>
+                          
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div><!-- End Portfolio Item -->
+
+                <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-Wilds">
+                  <div class="portfolio-wrap">
+                    <img src="assets/img/portfolio/影像 2.JPG" class="img-fluid" alt="Portfolio Image" loading="lazy">
+                    <div class="portfolio-info">
+                      <div class="content">
+                        <span class="category">Wilds</span>
+                        <h4>Acisoma panorpoides</h4>
+                        <div class="portfolio-links">
+                          <a href="assets/img/portfolio/影像 2.JPG" class="glightbox" title="Acisoma panorpoides"><i class="bi bi-plus-lg"></i></a>
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div><!-- End Portfolio Item -->
+
+                <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-Wilds">
+                  <div class="portfolio-wrap">
+                    <img src="assets/img/portfolio/影像.JPG" class="img-fluid" alt="Portfolio Image" loading="lazy">
+                    <div class="portfolio-info">
+                      <div class="content">
+                        <span class="category">Wilds</span>
+                        <h4>Urothemis signata yiei Asahina</h4>
+                        <div class="portfolio-links">
+                          <a href="assets/img/portfolio/影像.JPG" class="glightbox" title="Urothemis signata yiei Asahina"><i class="bi bi-plus-lg"></i></a>
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div><!-- End Portfolio Item -->
+
+              </div><!-- End Portfolio Container -->
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- /Portfolio Section -->
+
+    <!-- Chronicles Section -->
+    <section id="services" class="services section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Chronicles</h2>
+        <p>Every experience leaves a trace, and within these chronicles are glimpses of the journey that continues to shape my path.</p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row justify-content-center">
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-card position-relative z-1">
+              <div class="service-icon">
+                <i class="bi bi-palette"></i>
+              </div>
+              <a href="#" class="card-action d-flex align-items-center justify-content-center rounded-circle">
+                <i class="bi bi-arrow-up-right"></i>
+              </a>
+
+              <h3>
+                <a href="#">
+                  Bookworm <span> Circle</span>
+                </a>
+              </h3>
+              <p>
+                Reading, to me, is a luxury. There are moments when I allow my emotions to take the lead, consciously diving into the vast sea of books and immersing myself completely in the world of words. In those moments, I can set aside worries, responsibilities, and competition, and lose myself in a realm of imagination and beauty. Yet there are always moments when reason reaches in from below, pulling me back, forcing me to wake from my reverie and face reality once more. Reading, then, is a rare indulgence — a fleeting escape that grants me a blank space to receive beauty that is not mine to keep.
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="service-card position-relative z-1">
+              <div class="service-icon">
+                <i class="bi bi-gem"></i>
+              </div>
+              <a href="#portfolio" class="card-action d-flex align-items-center justify-content-center rounded-circle">
+                <i class="bi bi-arrow-up-right"></i>
+              </a>
+              <h3>
+                <a href="#portfolio">
+                  Star <span>Expo</span>
+                </a>
+              </h3>
+              <p>
+                An unforgettable experience that has become part of my identity. Leading a team of over a hundred in large-scale mountain observation activities, I engaged in professional astronomy courses and instrument setup workshops under the night sky and amidst natural landscapes. Serving as organizer, instrument instructor, and mentor, I learned from senior peers while taking on different roles each year. This has been a place that caught me when I felt lost, and an environment that nurtured me, teaching me the most when I felt unsure.
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="service-card position-relative z-1">
+              <div class="service-icon">
+                <i class="bi bi-megaphone"></i>
+              </div>
+              <a href="#portfolio" class="card-action d-flex align-items-center justify-content-center rounded-circle">
+                <i class="bi bi-arrow-up-right"></i>
+              </a>
+              <h3>
+                <a href="#portfolio">
+                  Beach <span>Cleanup</span>
+                </a>
+              </h3>
+              <p>
+                A meaningful experience at Taiwan's northernmost middle school.I connected with nature and learned about tidal ecosystems and the struggles of intertidal creatures.I witnessed the impact of human-generated waste and the resilience of Mother Nature.Broken tiles, aluminum, and glass were worn smooth, becoming part of the ecosystem.I discovered my passion for marine ecology.Even small actions can help protect and nurture our environment.
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </section><!-- /Services Section -->
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials section light-background">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Whispers of Wisdom</h2>
+        <p>Some words I hold close, little sparks that remind me to keep moving forward, even when the path is winding.</p>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="testimonial-masonry">
+
+          <div class="testimonial-item" data-aos="fade-up">
+            <div class="testimonial-content">
+              <div class="quote-pattern">
+                <i class="bi bi-quote"></i>
+              </div>
+              <p>In my realm, you must run with all your might simply to remain in the same place — for only by striving harder can you move ahead.</p>
+              <div class="client-info">
+                <div class="client-image">
+                  <img src="assets/img/person/RedQueen.jpg" alt="Client">
+                </div>
+                <div class="client-details">
+                  <h3>Red Queen</h3>
+                  <span class="position">Through the Looking-Glass</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-item highlight" data-aos="fade-up" data-aos-delay="100">
+            <div class="testimonial-content">
+              <div class="quote-pattern">
+                <i class="bi bi-quote"></i>
+              </div>
+              <p>Only by walking through the deepest night can we truly witness the beauty of sunrise, and only after the heaviest rain do the colors of the rainbow unfold. Out of darkness can come light, and when that light finally shines, may it shine even brighter.</p>
+              <div class="client-info">
+                <div class="client-image">
+                  <img src="assets/img/person/Princess of Wales.jpg" alt="Client">
+                </div>
+                <div class="client-details">
+                  <h3>Princess of Wales</h3>
+                  <span class="position">Adapted version</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-item" data-aos="fade-up" data-aos-delay="200">
+            <div class="testimonial-content">
+              <div class="quote-pattern">
+                <i class="bi bi-quote"></i>
+              </div>
+              <p>Don't compare your life with others. Every journey unfolds at its own pace. There's no comparison between the sun and the moon. They shine when it's their time.</p>
+              <div class="client-info">
+                <div class="client-image">
+                  <img src="assets/img/person/sunshine.avif" alt="Client">
+                </div>
+                <div class="client-details">
+                  <h3>Anonymous</h3>
+                  <span class="position">Adapted version</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-item" data-aos="fade-up" data-aos-delay="300">
+            <div class="testimonial-content">
+              <div class="quote-pattern">
+                <i class="bi bi-quote"></i>
+              </div>
+              <p>Take a deep breath. Don't beat yourself up, don't need to run so fast.Sometimes we come last, but we did our best.</p>
+              <div class="client-info">
+                <div class="client-image">
+                  <img src="assets/img/person/tryeverything.jpg" alt="Client">
+                </div>
+                <div class="client-details">
+                  <h3>Try Everything</h3>
+                  <span class="position">Lyrics</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-item highlight" data-aos="fade-up" data-aos-delay="400">
+            <div class="testimonial-content">
+              <div class="quote-pattern">
+                <i class="bi bi-quote"></i>
+              </div>
+              <p>I'm not lost — I'm simply choosing my destination. Along the way, allow pain not to break me, but to capture my attention and guide me toward a greater purpose.</p>
+              <div class="client-info">
+                <div class="client-image">
+                  <img src="assets/img/person/theburdin4.jpg" alt="Client">
+                </div>
+                <div class="client-details">
+                  <h3>The Bourne Legacy</h3>
+                  <span class="position">Adapted version</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-item" data-aos="fade-up" data-aos-delay="500">
+            <div class="testimonial-content">
+              <div class="quote-pattern">
+                <i class="bi bi-quote"></i>
+              </div>
+              <p>All of us are prodigal sons and daughters.It just takes longer to some of us more than others to come home.</p>
+                <div class="client-image">
+                  <img src="assets/img/person/cheaspe.jpeg" alt="Client">
+                </div>
+                <div class="client-details">
+                  <h3>Chesapeake Shores</h3>
+                  <span class="position"> Television Series</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- /Testimonials Section -->
+
+    <!-- React App Section -->
+    <section id="aitest" class="aitest section">
+      <div id="root"></div>
+    </section><!-- /React App Section -->
+
+  </main>
+
+  <footer id="footer" class="footer position-relative">
+
+    <div class="container">
+      <div class="copyright text-center ">
+        <p>© <span>Copyright</span> <strong class="px-1 sitename">iPortfolio</strong> <span>All Rights Reserved</span></p>
+      </div>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you've purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/typed.js/typed.umd.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
 </html>
