@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Hsueh's Web</title>
+  <title>Bookworm Circle - Hsueh's Web</title>
   <meta name="description" content="">
   <meta name="keywords" content="">
 
@@ -27,13 +27,284 @@
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
 
-  <!-- =======================================================
-  * Template Name: SnapFolio
-  * Template URL: https://bootstrapmade.com/snapfolio-bootstrap-portfolio-template/
-  * Updated: Jul 21 2025 with Bootstrap v5.3.7
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+  <!-- Custom CSS for Bookworm Page -->
+  <style>
+    /* Reading Philosophy Section */
+    .reading-philosophy {
+      background: linear-gradient(135deg, #2c344e 0%, #3f4b6f 100%);
+      color: #E4EAFF;
+      padding: 100px 0;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .reading-philosophy::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="%23ffffff" fill-opacity="0.1" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,112C672,96,768,96,864,112C960,128,1056,160,1152,160C1248,160,1344,128,1392,112L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>') no-repeat bottom;
+      background-size: cover;
+      opacity: 0.3;
+    }
+
+    .philosophy-content {
+      position: relative;
+      z-index: 1;
+      max-width: 900px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .philosophy-icon {
+      font-size: 4rem;
+      margin-bottom: 2rem;
+      opacity: 0.9;
+    }
+
+    .philosophy-text {
+      font-size: 1.25rem;
+      line-height: 2;
+      font-weight: 300;
+      font-style: italic;
+      text-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    }
+
+    /* Book Search Section */
+    .book-search-section {
+      padding: 80px 0;
+      background: #1f2949;
+    }
+
+    .search-container {
+      max-width: 700px;
+      margin: 0 auto 50px;
+    }
+
+    .search-box {
+      position: relative;
+    }
+
+    .search-box input {
+      width: 100%;
+      padding: 18px 60px 18px 25px;
+      border: 2px solid #3f4b6f;
+      border-radius: 50px;
+      font-size: 1.1rem;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      background: #2c344e;
+      color: #E4EAFF;
+    }
+
+    .search-box input:focus {
+      outline: none;
+      border-color: #E4EAFF;
+      box-shadow: 0 6px 20px rgba(228, 234, 255, 0.3);
+    }
+
+    .search-box input::placeholder {
+      color: rgba(228, 234, 255, 0.6);
+    }
+
+    .search-btn {
+      position: absolute;
+      right: 8px;
+      top: 50%;
+      transform: translateY(-50%);
+      background: linear-gradient(135deg, #3f4b6f 0%, #2c344e 100%);
+      color: #E4EAFF;
+      border: 1px solid #E4EAFF;
+      padding: 10px 25px;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .search-btn:hover {
+      transform: translateY(-50%) scale(1.05);
+      background: #E4EAFF;
+      color: #2c344e;
+      box-shadow: 0 4px 15px rgba(228, 234, 255, 0.4);
+    }
+
+    /* Category Pills */
+    .category-pills {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .category-pill {
+      display: inline-block;
+      padding: 10px 25px;
+      margin: 5px;
+      background: #2c344e;
+      border: 2px solid #E4EAFF;
+      color: #E4EAFF;
+      border-radius: 25px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-weight: 500;
+    }
+
+    .category-pill:hover,
+    .category-pill.active {
+      background: #E4EAFF;
+      color: #2c344e;
+      border-color: #E4EAFF;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 15px rgba(228, 234, 255, 0.3);
+    }
+
+    /* Book Cards */
+    .books-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
+    }
+
+    .book-card {
+      background: #3f4b6f;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+      transition: all 0.3s ease;
+      cursor: pointer;
+      position: relative;
+      border: 1px solid rgba(228, 234, 255, 0.1);
+    }
+
+    .book-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 35px rgba(228, 234, 255, 0.2);
+      border-color: rgba(228, 234, 255, 0.3);
+    }
+
+    .book-cover {
+      width: 100%;
+      height: 350px;
+      object-fit: cover;
+      background: linear-gradient(135deg, #2c344e 0%, #3f4b6f 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #E4EAFF;
+      font-size: 3rem;
+      position: relative;
+    }
+
+    .book-cover img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .book-info {
+      padding: 20px;
+    }
+
+    .book-title {
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: #f5f6f9;
+      margin-bottom: 10px;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    .book-author {
+      color: #E4EAFF;
+      font-size: 0.95rem;
+      margin-bottom: 5px;
+      font-weight: 500;
+    }
+
+    .book-year {
+      color: rgba(228, 234, 255, 0.6);
+      font-size: 0.85rem;
+      margin-bottom: 15px;
+    }
+
+    .book-description {
+      font-size: 0.9rem;
+      color: rgba(228, 234, 255, 0.8);
+      line-height: 1.6;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    /* Loading Spinner */
+    .loading {
+      text-align: center;
+      padding: 60px 0;
+    }
+
+    .spinner {
+      width: 50px;
+      height: 50px;
+      border: 4px solid #3f4b6f;
+      border-top: 4px solid #E4EAFF;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+      margin: 0 auto;
+    }
+
+    .loading p {
+      color: #E4EAFF;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    /* Empty State */
+    .empty-state {
+      text-align: center;
+      padding: 80px 20px;
+      color: rgba(228, 234, 255, 0.6);
+    }
+
+    .empty-state i {
+      font-size: 4rem;
+      margin-bottom: 20px;
+      opacity: 0.5;
+      color: #E4EAFF;
+    }
+
+    .empty-state h3 {
+      color: #E4EAFF;
+    }
+
+    /* Error Message */
+    .error-message {
+      background: rgba(255, 193, 7, 0.15);
+      border: 1px solid rgba(255, 193, 7, 0.5);
+      border-radius: 10px;
+      padding: 20px;
+      margin: 20px 0;
+      text-align: center;
+      color: #E4EAFF;
+    }
+
+    /* Section Title */
+    .section-title h2 {
+      color: #f5f6f9;
+    }
+
+    .section-title p {
+      color: rgba(228, 234, 255, 0.8);
+    }
+  </style>
 </head>
 
 <body class="index-page">
@@ -44,24 +315,21 @@
     <div class="header-container d-flex flex-column align-items-start">
       <nav id="navmenu" class="navmenu">
         <ul>
-          <li><a href="#hero" class="active"><i class="bi bi-house navicon"></i> Home</a></li>
-          <li><a href="#about"><i class="bi bi-person navicon"></i> About</a></li>
-          <li><a href="#resume"><i class="bi bi-file-earmark-text navicon"></i> Resume</a></li>
-          <li><a href="#portfolio"><i class="bi bi-images navicon"></i> Portfolio</a></li>
-          <li class="dropdown"><a href="#services"><i class="bi bi-menu-button navicon"></i> <span>Chronicles</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+          <li><a href="index.html#hero"><i class="bi bi-house navicon"></i> Home</a></li>
+          <li><a href="index.html#about"><i class="bi bi-person navicon"></i> About</a></li>
+          <li><a href="index.html#resume"><i class="bi bi-file-earmark-text navicon"></i> Resume</a></li>
+          <li><a href="index.html#portfolio"><i class="bi bi-images navicon"></i> Portfolio</a></li>
+          <li class="dropdown"><a href="index.html#services"><i class="bi bi-menu-button navicon"></i> <span>Chronicles</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
-              <li><a href="#">Bookworm Circle</a></li>
-              <li><a href="#">Star Expo</a></li>
-              <li><a href="#">Beach Cleanup</a></li>
+              <li><a href="Bookworm-page.html" class="active">Bookworm Circle</a></li>
+              <li><a href="StarExpo-page.html">Star Expo</a></li>
+              <li><a href="index.html#services">Beach Cleanup</a></li>
             </ul>
           </li>
-          <li><a href="#testimonials"><i class="bi bi-chat-dots navicon"></i> Whispers of Wisdom</a></li>
-
+          <li><a href="index.html#testimonials"><i class="bi bi-chat-dots navicon"></i> Whispers of Wisdom</a></li>
         </ul>
       </nav>
-
     </div>
-
   </header>
 
   <main class="main">
@@ -77,40 +345,76 @@
           </ol>
         </nav>
       </div>
-    </div><!-- End Page Title -->
+    </div>
 
-    <!-- Starter Section Section -->
-    <section id="starter-section" class="starter-section section">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Starter Section</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
-      </div><!-- End Section Title -->
-
-      <div class="container" data-aos="fade-up">
-        <p>Use this page as a starter for your own custom pages.</p>
+    <!-- Reading Philosophy Section -->
+    <section class="reading-philosophy">
+      <div class="philosophy-content" data-aos="fade-up">
+        <div class="philosophy-icon">
+          <i class="bi bi-book-half"></i>
+        </div>
+        <br/>
+        <br/>
+        <p class="philosophy-text">
+          Reading, to me, is a luxury. There are moments when I allow my emotions to take the lead, consciously diving into the vast sea of books and immersing myself completely in the world of words. In those moments, I can set aside worries, responsibilities, and competition, and lose myself in a realm of imagination and beauty. Yet there are always moments when reason reaches in from below, pulling me back, forcing me to wake from my reverie and face reality once more. Reading, then, is a rare indulgence — a fleeting escape that grants me a blank space to receive beauty that is not mine to keep.
+        </p>
       </div>
+    </section>
 
-    </section><!-- /Starter Section Section -->
+    <!-- Book Search & Recommendation Section -->
+    <section class="book-search-section">
+      <div class="container">
+
+        <!-- Section Title -->
+        <div class="section-title text-center mb-5" data-aos="fade-up">
+          <h2>Discover Your Next Read</h2>
+          <p>Search for books or explore curated recommendations</p>
+        </div>
+
+        <!-- Search Box -->
+        <div class="search-container" data-aos="fade-up" data-aos-delay="100">
+          <div class="search-box">
+            <input type="text" id="bookSearch" placeholder="Search by title, author, or subject...">
+            <button class="search-btn" onclick="searchBooks()">
+              <i class="bi bi-search"></i> Search
+            </button>
+          </div>
+        </div>
+
+        <!-- Category Pills -->
+        <div class="category-pills" data-aos="fade-up" data-aos-delay="200">
+          <span class="category-pill active" onclick="loadCategory('fiction')">Fiction</span>
+          <span class="category-pill" onclick="loadCategory('science')">Science</span>
+          <span class="category-pill" onclick="loadCategory('philosophy')">Philosophy</span>
+          <span class="category-pill" onclick="loadCategory('poetry')">Poetry</span>
+          <span class="category-pill" onclick="loadCategory('classics')">Classics</span>
+        </div>
+
+        <!-- Books Grid -->
+        <div id="booksContainer" class="books-grid" data-aos="fade-up" data-aos-delay="300">
+          <!-- Books will be loaded here dynamically -->
+        </div>
+
+        <!-- Loading Indicator -->
+        <div id="loadingIndicator" class="loading" style="display: none;">
+          <div class="spinner"></div>
+          <p class="mt-3">Loading books...</p>
+        </div>
+
+      </div>
+    </section>
 
   </main>
 
   <footer id="footer" class="footer position-relative">
-
     <div class="container">
       <div class="copyright text-center ">
         <p>© <span>Copyright</span> <strong class="px-1 sitename">iPortfolio</strong> <span>All Rights Reserved</span></p>
       </div>
       <div class="credits">
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you've purchased the pro version. -->
-        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
         Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
       </div>
     </div>
-
   </footer>
 
   <!-- Scroll Top -->
@@ -133,6 +437,177 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+
+  <!-- Book API Integration Script -->
+  <script>
+    // Open Library API Integration
+    const API_BASE = 'https://openlibrary.org';
+    let currentCategory = 'fiction';
+
+    // Initialize page with default category
+    window.addEventListener('load', () => {
+      loadCategory('fiction');
+    });
+
+    // Search books by query
+    async function searchBooks() {
+      const query = document.getElementById('bookSearch').value.trim();
+      if (!query) {
+        alert('Please enter a search term');
+        return;
+      }
+
+      showLoading();
+
+      try {
+        const response = await fetch(`${API_BASE}/search.json?q=${encodeURIComponent(query)}&limit=12`);
+        const data = await response.json();
+
+        if (data.docs && data.docs.length > 0) {
+          displayBooks(data.docs);
+        } else {
+          showEmptyState('No books found. Try a different search term.');
+        }
+      } catch (error) {
+        console.error('Error fetching books:', error);
+        showError('Failed to load books. Please try again.');
+      } finally {
+        hideLoading();
+      }
+    }
+
+    // Load books by category/subject
+    async function loadCategory(category) {
+      // Update active pill
+      document.querySelectorAll('.category-pill').forEach(pill => {
+        pill.classList.remove('active');
+      });
+      event.target.classList.add('active');
+
+      currentCategory = category;
+      showLoading();
+
+      try {
+        const response = await fetch(`${API_BASE}/subjects/${category}.json?limit=12`);
+        const data = await response.json();
+
+        if (data.works && data.works.length > 0) {
+          displayBooks(data.works, true);
+        } else {
+          showEmptyState('No books found in this category.');
+        }
+      } catch (error) {
+        console.error('Error fetching books:', error);
+        showError('Failed to load books. Please try again.');
+      } finally {
+        hideLoading();
+      }
+    }
+
+    // Display books in grid
+    function displayBooks(books, isSubject = false) {
+      const container = document.getElementById('booksContainer');
+      container.innerHTML = '';
+
+      books.forEach(book => {
+        const bookCard = createBookCard(book, isSubject);
+        container.appendChild(bookCard);
+      });
+    }
+
+    // Create individual book card
+    function createBookCard(book, isSubject) {
+      const card = document.createElement('div');
+      card.className = 'book-card';
+      card.setAttribute('data-aos', 'fade-up');
+
+      // Extract book information
+      const title = book.title || 'Unknown Title';
+      const authors = isSubject
+        ? (book.authors ? book.authors.map(a => a.name).join(', ') : 'Unknown Author')
+        : (book.author_name ? book.author_name.join(', ') : 'Unknown Author');
+      const year = book.first_publish_year || 'N/A';
+      const coverId = isSubject
+        ? (book.cover_id || null)
+        : (book.cover_i || null);
+      const key = book.key;
+
+      // Get book description (if available)
+      let description = 'Click to view more details about this book.';
+      if (book.description) {
+        description = typeof book.description === 'string'
+          ? book.description
+          : book.description.value || description;
+      }
+
+      card.innerHTML = `
+        <div class="book-cover">
+          ${coverId
+            ? `<img src="https://covers.openlibrary.org/b/id/${coverId}-L.jpg" alt="${title}" onerror="this.parentElement.innerHTML='<i class=\\'bi bi-book\\'></i>'">`
+            : '<i class="bi bi-book"></i>'}
+        </div>
+        <div class="book-info">
+          <h3 class="book-title">${title}</h3>
+          <p class="book-author">${authors}</p>
+          <p class="book-year">Published: ${year}</p>
+          <p class="book-description">${description.substring(0, 150)}${description.length > 150 ? '...' : ''}</p>
+        </div>
+      `;
+
+      // Add click event to open book details
+      card.addEventListener('click', () => {
+        window.open(`${API_BASE}${key}`, '_blank');
+      });
+
+      return card;
+    }
+
+    // Show loading indicator
+    function showLoading() {
+      document.getElementById('loadingIndicator').style.display = 'block';
+      document.getElementById('booksContainer').style.display = 'none';
+    }
+
+    // Hide loading indicator
+    function hideLoading() {
+      document.getElementById('loadingIndicator').style.display = 'none';
+      document.getElementById('booksContainer').style.display = 'grid';
+    }
+
+    // Show empty state
+    function showEmptyState(message) {
+      const container = document.getElementById('booksContainer');
+      container.innerHTML = `
+        <div class="empty-state" style="grid-column: 1 / -1;">
+          <i class="bi bi-inbox"></i>
+          <h3>${message}</h3>
+        </div>
+      `;
+    }
+
+    // Show error message
+    function showError(message) {
+      const container = document.getElementById('booksContainer');
+      container.innerHTML = `
+        <div class="error-message" style="grid-column: 1 / -1;">
+          <i class="bi bi-exclamation-triangle"></i>
+          <p>${message}</p>
+        </div>
+      `;
+    }
+
+    // Allow Enter key to trigger search
+    document.addEventListener('DOMContentLoaded', () => {
+      const searchInput = document.getElementById('bookSearch');
+      if (searchInput) {
+        searchInput.addEventListener('keypress', (e) => {
+          if (e.key === 'Enter') {
+            searchBooks();
+          }
+        });
+      }
+    });
+  </script>
 
 </body>
 
