@@ -482,10 +482,9 @@
   <!-- NASA APOD API Integration Script -->
   <script>
     // NASA APOD API Configuration
-    // 步驟說明：你可以使用 DEMO_KEY 或申請自己的 API key
-    // 申請網址：https://api.nasa.gov/
-    const NASA_API_KEY = 'DEMO_KEY'; // 你可以在這裡替換成你的 API key
-    const NASA_API_URL = 'https://api.nasa.gov/planetary/apod';
+    // 改用自己的 Vercel API endpoint（API key 隱藏在後端）
+    const NASA_API_URL = '/api/nasa-apod';
+
 
     let currentDate = new Date();
 
@@ -523,10 +522,10 @@
       showLoading();
 
       try {
-        // 步驟 1: 建立 API 請求 URL
-        const apiUrl = `${NASA_API_URL}?api_key=${NASA_API_KEY}&date=${selectedDate}`;
+        // 步驟 1: 建立 API 請求 URL（呼叫自己的後端 API）
+        const apiUrl = `${NASA_API_URL}?date=${selectedDate}`;
 
-        // 步驟 2: 發送請求到 NASA API
+        // 步驟 2: 發送請求到 Vercel Serverless Function
         const response = await fetch(apiUrl);
 
         // 步驟 3: 檢查回應是否成功
