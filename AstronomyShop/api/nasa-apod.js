@@ -7,6 +7,7 @@
       return res.status(405).json({ error: 'Method not allowed' });
     }
 
+    
     try {
       // 從環境變數中讀取 API key（這樣 key 就不會暴露在程式碼中）
       const NASA_API_KEY = process.env.NASA_API_KEY;
